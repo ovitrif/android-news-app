@@ -2,7 +2,7 @@
 <resources>
 
     <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryLight">#F4F4F4</color>
+    <color name="colorPrimaryLight">#FAFAFA</color>
     <color name="colorPrimaryDark">#888888</color>
 
     <color name="colorAccent">#444444</color>
@@ -12,7 +12,7 @@
     <color name="colorText">#555555</color>
     <color name="colorTextDark">#000000</color>
 
-    <color name="appBg">@color/colorPrimary</color>
+    <color name="appBg">@color/colorPrimaryLight</color>
     <color name="appSystemBars">@color/colorPrimaryDark</color>
     <color name="buttonColor">@color/colorTertiary</color>
 

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="contentPaddingHalf">6dp</dimen>
     <dimen name="contentPadding">12dp</dimen>
-    <dimen name="contentPadding2x">24dp</dimen>
+    <dimen name="contentPaddingDouble">24dp</dimen>
     <dimen name="contentPaddingText">6dp</dimen>
 
     <dimen name="buttonStroke">1.5dp</dimen>
     <dimen name="buttonCornerRadius">3dp</dimen>
 
+    <dimen name="articleTitleTextSize">18sp</dimen>
 
     <dimen name="elevationMedium">2.5dp</dimen>
+
+    <dimen name="articleCardElevation">1dp</dimen>
+    <dimen name="articleCardTitlePadding">8dp</dimen>
+    <dimen name="articleCardPadding">16dp</dimen>
 </resources>

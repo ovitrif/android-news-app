@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/contentPadding"
+    android:layout_marginEnd="@dimen/contentPadding"
+    android:layout_marginStart="@dimen/contentPadding"
+    android:background="@color/colorPrimary"
+    android:foreground="?attr/selectableItemBackground"
+    android:translationZ="@dimen/articleCardElevation"
+    app:cardCornerRadius="@dimen/contentPaddingText"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    tools:ignore="UnusedAttribute">
+
+    <LinearLayout
+        android:id="@+id/learn_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/contentPadding">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextDark"
+            android:textSize="@dimen/articleTitleTextSize"
+            android:textStyle="bold"
+            tools:text="@string/lorem_ipsum_title" />
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/articleCardTitlePadding"
+            tools:text="@string/lorem_ipsum" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>
