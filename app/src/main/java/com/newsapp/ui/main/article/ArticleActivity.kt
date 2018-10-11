@@ -1,43 +1,37 @@
-package com.newsapp.ui.main.detail
+package com.newsapp.ui.main.article
 
 import android.os.Bundle
 import butterknife.ButterKnife
-import butterknife.OnClick
 import com.newsapp.App
 import com.newsapp.R
-import com.newsapp.extensions.showKeyboard
 import com.newsapp.ui.BaseActivity
-import com.newsapp.ui.main.detail.di.DaggerDetailComponent
-import com.newsapp.ui.main.detail.di.DetailModule
+import com.newsapp.ui.main.article.di.ArticleModule
+import com.newsapp.ui.main.article.di.DaggerArticleComponent
 import com.newsapp.ui.navigator.NavigatorModule
-import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.activity_article.*
 import kotlinx.android.synthetic.main.view_app_bar.*
 
-class DetailActivity : BaseActivity(), IDetail.View {
+class ArticleActivity : BaseActivity(), IArticle.View {
 
-    private lateinit var presenter: IDetail.Presenter
+    private lateinit var presenter: IArticle.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        setContentView(R.layout.activity_article)
         ButterKnife.bind(this)
 
-        val component = DaggerDetailComponent.builder()
+        val component = DaggerArticleComponent.builder()
                 .appComponent(App.getAppComponent(this))
-                .detailModule(DetailModule(this, this))
+                .articleModule(ArticleModule(this, this))
                 .navigatorModule(NavigatorModule(this))
                 .build()
         presenter = component.presenter()
         initView()
-    }
-
-    override fun onResume() {
-        super.onResume()
         presenter.onShow()
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onDestroy() {
+        super.onDestroy()
         presenter.onHide()
     }
 
@@ -45,6 +39,6 @@ class DetailActivity : BaseActivity(), IDetail.View {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setTitle("")
+        supportActionBar?.setTitle(0)
     }
 }

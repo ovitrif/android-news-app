@@ -2,6 +2,7 @@
 <LinearLayout
     android:id="@+id/root_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,8 +13,16 @@
         android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
+        android:layout_marginEnd="@dimen/contentPadding"
+        android:layout_marginStart="@dimen/contentPadding"
+        android:layout_marginTop="@dimen/contentPaddingDouble"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="@string/lorem_ipsum" />
 
     </LinearLayout>
 

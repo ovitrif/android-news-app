@@ -1,7 +1,7 @@
-package com.newsapp.ui.main.detail.di
+package com.newsapp.ui.main.article.di
 
 import android.app.Activity
-import com.newsapp.ui.main.detail.IDetail
+import com.newsapp.ui.main.article.IDetail
 import dagger.Module
 import dagger.Provides
 

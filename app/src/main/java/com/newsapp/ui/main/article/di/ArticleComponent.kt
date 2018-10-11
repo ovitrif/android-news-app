@@ -1,8 +1,8 @@
-package com.newsapp.ui.main.detail.di
+package com.newsapp.ui.main.article.di
 
 import com.newsapp.di.ActivityScope
 import com.newsapp.di.AppComponent
-import com.newsapp.ui.main.detail.DetailPresenter
+import com.newsapp.ui.main.article.DetailPresenter
 import com.newsapp.ui.navigator.NavigatorModule
 import dagger.Component
 

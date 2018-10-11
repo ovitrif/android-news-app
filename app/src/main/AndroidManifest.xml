@@ -29,8 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- Detail -->
-        <activity android:name="com.newsapp.ui.main.detail.DetailActivity" />
+        <!-- Article -->
+        <activity android:name="com.newsapp.ui.main.article.ArticleActivity" />
     </application>
 
 </manifest>
