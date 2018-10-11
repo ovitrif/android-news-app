@@ -17,4 +17,5 @@
     <dimen name="articleCardElevation">1dp</dimen>
     <dimen name="articleCardTitlePadding">8dp</dimen>
     <dimen name="articleCardPadding">16dp</dimen>
+    <dimen name="articleThumbSize">150dp</dimen>
 </resources>

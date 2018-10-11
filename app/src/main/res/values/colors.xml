@@ -12,6 +12,7 @@
     <color name="colorText">#555555</color>
     <color name="colorTextDark">#000000</color>
     <color name="colorTextDim">#BBBBBB</color>
+    <color name="colorImagePlaceholder">#F4F4F4</color>
 
     <color name="appBg">@color/colorPrimaryLight</color>
     <color name="appSystemBars">@color/colorPrimaryDark</color>

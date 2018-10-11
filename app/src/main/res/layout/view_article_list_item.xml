@@ -17,10 +17,18 @@
     app:cardUseCompatPadding="true"
     tools:ignore="UnusedAttribute">
 
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/articleThumbSize"
+        android:scaleType="centerCrop"
+        tools:src="@color/colorImagePlaceholder" />
+
     <LinearLayout
         android:id="@+id/learn_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/articleThumbSize"
         android:orientation="vertical"
         android:padding="@dimen/contentPadding">
 

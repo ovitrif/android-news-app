@@ -20,9 +20,7 @@
         android:theme="@style/AppTheme">
 
         <!-- Main -->
-        <activity
-            android:name="com.newsapp.ui.main.MainActivity"
-            android:noHistory="true">
+        <activity android:name="com.newsapp.ui.main.MainActivity">
             <!-- Launcher -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,9 +30,7 @@
             </intent-filter>
         </activity>
         <!-- Detail -->
-        <activity
-            android:name="com.newsapp.ui.main.detail.DetailActivity"
-            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity android:name="com.newsapp.ui.main.detail.DetailActivity" />
     </application>
 
 </manifest>

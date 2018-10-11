@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.view_app_bar.*
 class MainActivity : BaseActivity(), IMain.View {
 
     private lateinit var presenter: IMain.Presenter
-    private val adapter = ArticleListAdapter()
+    private lateinit var adapter: ArticleListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,21 +30,18 @@ class MainActivity : BaseActivity(), IMain.View {
                 .navigatorModule(NavigatorModule(this))
                 .build()
         presenter = component.presenter()
+        adapter = component.adapter()
 
         initView()
+        presenter.onShow()
     }
 
     override fun addArticles(items: List<Article>) {
         adapter.append(items)
     }
 
-    override fun onResume() {
-        super.onResume()
-        presenter.onShow()
-    }
-
-    override fun onStop() {
-        super.onStop()
+    override fun onDestroy() {
+        super.onDestroy()
         presenter.onHide()
     }
 
