@@ -34,6 +34,14 @@
             tools:text="@string/lorem_ipsum_title" />
 
         <TextView
+            android:id="@+id/timestamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextDim"
+            android:textSize="@dimen/articleTimeTextSize"
+            tools:text="@string/lorem_ipsum_title" />
+
+        <TextView
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

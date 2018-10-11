@@ -10,6 +10,7 @@
     <dimen name="buttonCornerRadius">3dp</dimen>
 
     <dimen name="articleTitleTextSize">18sp</dimen>
+    <dimen name="articleTimeTextSize">12sp</dimen>
 
     <dimen name="elevationMedium">2.5dp</dimen>
 

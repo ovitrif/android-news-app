@@ -15,6 +15,7 @@ class ArticleListItem(
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.apply {
             title.text = data.title
+            timestamp.text = data.created.formatted
             body.text = data.teaser_html.toHtml()
         }
     }

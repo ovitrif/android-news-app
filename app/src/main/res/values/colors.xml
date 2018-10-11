@@ -2,7 +2,7 @@
 <resources>
 
     <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryLight">#FAFAFA</color>
+    <color name="colorPrimaryLight">#F8F8F8</color>
     <color name="colorPrimaryDark">#888888</color>
 
     <color name="colorAccent">#444444</color>
@@ -11,6 +11,7 @@
 
     <color name="colorText">#555555</color>
     <color name="colorTextDark">#000000</color>
+    <color name="colorTextDim">#BBBBBB</color>
 
     <color name="appBg">@color/colorPrimaryLight</color>
     <color name="appSystemBars">@color/colorPrimaryDark</color>
