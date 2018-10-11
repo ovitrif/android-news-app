@@ -41,8 +41,6 @@ class DetailActivity : BaseActivity(), IDetail.View {
         presenter.onHide()
     }
 
-    override fun onBackPressed() = presenter.onBackPressed()
-
     private fun initView() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

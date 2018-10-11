@@ -8,6 +8,5 @@ interface IDetail {
     }
 
     interface Presenter : Presentable {
-        fun onBackPressed()
     }
 }
