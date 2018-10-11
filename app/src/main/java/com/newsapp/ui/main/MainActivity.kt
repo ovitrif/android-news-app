@@ -2,7 +2,6 @@ package com.newsapp.ui.main
 
 import android.os.Bundle
 import butterknife.ButterKnife
-import butterknife.OnClick
 import com.newsapp.App
 import com.newsapp.R
 import com.newsapp.ui.BaseActivity
@@ -43,9 +42,6 @@ class MainActivity : BaseActivity(), IMain.View {
     override fun onBackPressed() {
         moveTaskToBack(true)
     }
-
-    @OnClick(R.id.detailNavBtn)
-    fun onDetailNavBtnClick() = presenter.onDetailNavBtnClick()
 
     private fun initView() {
         setSupportActionBar(toolbar)

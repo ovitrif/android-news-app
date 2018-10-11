@@ -12,16 +12,7 @@
         android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical"
         android:orientation="vertical">
-
-        <android.support.design.button.MaterialButton
-            android:id="@+id/detailNavBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/main_detail_btn" />
 
     </LinearLayout>
 

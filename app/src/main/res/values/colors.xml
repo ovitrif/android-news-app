@@ -9,11 +9,11 @@
     <color name="colorSecondary">#00AAFF</color>
     <color name="colorTertiary">#FF5500</color>
 
-    <color name="colorDark">#444444</color>
+    <color name="colorText">#555555</color>
+    <color name="colorTextDark">#000000</color>
 
     <color name="appBg">@color/colorPrimary</color>
     <color name="appSystemBars">@color/colorPrimaryDark</color>
     <color name="buttonColor">@color/colorTertiary</color>
-    <color name="textGray">@color/colorPrimaryDark</color>
 
 </resources>

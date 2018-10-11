@@ -3,9 +3,11 @@
 
     <dimen name="contentPadding">12dp</dimen>
     <dimen name="contentPadding2x">24dp</dimen>
-    <dimen name="contentPaddingButton">11dp</dimen>
+    <dimen name="contentPaddingText">6dp</dimen>
 
     <dimen name="buttonStroke">1.5dp</dimen>
     <dimen name="buttonCornerRadius">3dp</dimen>
 
+
+    <dimen name="elevationMedium">2.5dp</dimen>
 </resources>

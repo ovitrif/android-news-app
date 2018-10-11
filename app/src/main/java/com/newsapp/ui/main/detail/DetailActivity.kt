@@ -43,26 +43,10 @@ class DetailActivity : BaseActivity(), IDetail.View {
 
     override fun onBackPressed() = presenter.onBackPressed()
 
-    @OnClick(R.id.getBtn)
-    fun onGetClick() = presenter.onGetClick()
-
-    override val userName get() = userNameFieldView.text.toString()
-
-    override var dataText
-        get() = dataTextView.text.toString()
-        set(value) = with(dataTextView) { text = value }
-
-
-    override fun setInputError(errorMessage: Int) = with(userNameLayoutView) { error = getString(errorMessage) }
-
-    override fun clearInputError() = with(userNameLayoutView) { error = null }
-
     private fun initView() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setTitle(R.string.detail_title)
-
-        userNameFieldView.showKeyboard()
+        supportActionBar?.setTitle("")
     }
 }

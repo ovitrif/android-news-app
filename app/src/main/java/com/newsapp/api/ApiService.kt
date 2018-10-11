@@ -1,16 +1,14 @@
 package com.newsapp.api
 
-import com.newsapp.domain.entities.User
+import com.newsapp.domain.entities.ArticlesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
-import retrofit2.http.Path
+import retrofit2.http.Query
 
-/**
- * API calls interface implemented by Retrofit2.
- * Use specific RxJava return types like: Single, Completable, Observable.
- */
 interface ApiService {
 
-    @GET("users/{userName}")
-    fun getUser(@Path("userName") userName: String): Single<User>
+    @GET("feed/articles")
+    fun getArticles(
+            @Query("count") count: Int,
+            @Query("fields") fields: String): Single<ArticlesResponse>
 }
