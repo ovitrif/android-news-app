@@ -9,5 +9,5 @@ A sample app built with the [SNIPED architecture](https://github.com/ovitrif/and
 
 ## Test
 - In the Project view, navigate to *app > java* 
-- Right click on *com.newsapp (test)*
+- Right click on *com.newsapp (androidTest)*
 - Click 'Run Tests in 'com.newsapp''
