@@ -1,4 +1,4 @@
-package com.newsapp.test
+package com.newsapp
 
 import android.os.Build
 import org.junit.runner.RunWith

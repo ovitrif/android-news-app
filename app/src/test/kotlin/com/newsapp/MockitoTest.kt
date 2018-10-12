@@ -1,4 +1,4 @@
-package com.newsapp.test
+package com.newsapp
 
 import org.junit.runner.RunWith
 import org.mockito.junit.MockitoJUnitRunner

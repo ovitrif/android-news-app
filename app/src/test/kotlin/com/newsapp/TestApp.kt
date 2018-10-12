@@ -1,6 +1,4 @@
-package com.newsapp.test
-
-import com.newsapp.App
+package com.newsapp
 
 class TestApp : App() {
 

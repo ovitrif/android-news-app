@@ -16,6 +16,7 @@ android {
         multiDexEnabled true
         versionCode versioning.getVersionCode()
         versionName '1.0.0'
+        testInstrumentationRunner 'com.newsapp.AndroidTestRunner'
 
         renderscriptTargetApi 19
         renderscriptSupportModeEnabled true
