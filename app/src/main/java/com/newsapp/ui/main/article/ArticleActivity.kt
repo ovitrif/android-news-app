@@ -8,7 +8,6 @@ import com.newsapp.extensions.toHtml
 import com.newsapp.ui.BaseActivity
 import com.newsapp.ui.main.article.di.ArticleModule
 import com.newsapp.ui.main.article.di.DaggerArticleComponent
-import com.newsapp.ui.navigator.NavigatorModule
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_article.*
 import kotlinx.android.synthetic.main.view_app_bar.*
@@ -26,7 +25,6 @@ class ArticleActivity : BaseActivity(), IArticle.View {
         val component = DaggerArticleComponent.builder()
                 .appComponent(App.getAppComponent(this))
                 .articleModule(ArticleModule(this, this))
-                .navigatorModule(NavigatorModule(this))
                 .build()
         presenter = component.presenter()
         initView()
