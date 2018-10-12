@@ -1,6 +1,6 @@
 package com.newsapp.api
 
-import com.newsapp.domain.entities.ArticlesResponse
+import com.newsapp.ui.main.domain.ArticlesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

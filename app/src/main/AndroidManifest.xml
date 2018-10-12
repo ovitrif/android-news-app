@@ -30,7 +30,9 @@
             </intent-filter>
         </activity>
         <!-- Article -->
-        <activity android:name="com.newsapp.ui.main.article.ArticleActivity" />
+        <activity
+            android:name="com.newsapp.ui.main.article.ArticleActivity"
+            android:theme="@style/AppTheme.TranslucentStatusBar" />
     </application>
 
 </manifest>

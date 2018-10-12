@@ -6,9 +6,9 @@ interface IArticle {
 
     interface View {
         fun setTitle(text: String)
-        fun setContent(text: String)
+        fun setText(text: String)
+        fun setCoverImage(url: String)
     }
 
-    interface Presenter : Presentable {
-    }
+    interface Presenter : Presentable
 }

@@ -6,16 +6,19 @@
     <dimen name="contentPaddingDouble">24dp</dimen>
     <dimen name="contentPaddingText">6dp</dimen>
 
-    <dimen name="buttonStroke">1.5dp</dimen>
-    <dimen name="buttonCornerRadius">3dp</dimen>
-
-    <dimen name="articleTitleTextSize">18sp</dimen>
-    <dimen name="articleTimeTextSize">12sp</dimen>
-
     <dimen name="elevationMedium">2.5dp</dimen>
 
     <dimen name="articleCardElevation">1dp</dimen>
-    <dimen name="articleCardTitlePadding">8dp</dimen>
     <dimen name="articleCardPadding">16dp</dimen>
-    <dimen name="articleThumbSize">150dp</dimen>
+    <dimen name="articleCardTitleTextSize">18sp</dimen>
+    <dimen name="articleCardTimeTextSize">12sp</dimen>
+    <dimen name="articleCardTitlePadding">8dp</dimen>
+    <dimen name="articleCardThumbSize">150dp</dimen>
+
+    <dimen name="articleTextSize">16sp</dimen>
+    <dimen name="articleTitleTextSize">22sp</dimen>
+    <dimen name="articleTitleBarTextSize">20sp</dimen>
+
+    <dimen name="imageAppBarHeight">320dp</dimen>
+    <dimen name="imageAppBarCollapsedHeight">82dp</dimen>
 </resources>

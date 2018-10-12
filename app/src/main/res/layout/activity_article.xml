@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/root_view"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
 
-    <include layout="@layout/view_app_bar" />
+    <include layout="@layout/view_app_bar_image" />
 
-    <LinearLayout
-        android:id="@+id/content_view"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="@dimen/contentPadding"
-        android:layout_marginStart="@dimen/contentPadding"
-        android:layout_marginTop="@dimen/contentPaddingDouble"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <TextView
-            android:id="@+id/body"
+        <LinearLayout
+            android:id="@+id/body_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="@string/lorem_ipsum" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/contentPaddingDouble"
+            android:layout_marginEnd="@dimen/contentPadding"
+            android:layout_marginStart="@dimen/contentPadding"
+            android:layout_marginTop="@dimen/contentPaddingDouble"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/articleTextSize"
+                tools:text="@string/lorem_ipsum" />
+        </LinearLayout>
 
-</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

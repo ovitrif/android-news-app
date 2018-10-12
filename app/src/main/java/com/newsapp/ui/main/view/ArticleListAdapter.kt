@@ -1,6 +1,6 @@
 package com.newsapp.ui.main.view
 
-import com.newsapp.domain.entities.Article
+import com.newsapp.ui.main.domain.Article
 import com.newsapp.ui.adapter.GroupieAdapter
 import javax.inject.Inject
 
