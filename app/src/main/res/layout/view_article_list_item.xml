@@ -36,7 +36,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextDark"
+            android:textColor="@color/black"
             android:textSize="@dimen/articleCardTitleTextSize"
             android:textStyle="bold"
             tools:text="@string/lorem_ipsum_title" />
@@ -45,7 +45,7 @@
             android:id="@+id/timestamp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextDim"
+            android:textColor="@color/smokeGray"
             android:layout_marginTop="@dimen/contentPaddingQuarter"
             android:textSize="@dimen/articleCardTimeTextSize"
             tools:text="@string/lorem_ipsum_title" />

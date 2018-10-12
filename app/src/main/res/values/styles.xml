@@ -3,9 +3,9 @@
     <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryDark">@color/white</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/gray</item>
         <item name="colorButtonNormal">@color/orange</item>
-        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textColor">@color/gray</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -13,7 +13,7 @@
         <item name="android:windowBackground">@color/smoke</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
         <item name="android:statusBarColor">@color/white</item>
-        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/gray</item>
 
         <item name="materialButtonStyle">@style/AppTheme.Button</item>
     </style>

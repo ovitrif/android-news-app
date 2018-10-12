@@ -44,7 +44,7 @@ class ArticleActivity : BaseActivity(), IArticle.View {
         if (url.isNotBlank()) {
             Picasso.get()
                     .load(url)
-                    .placeholder(R.color.colorTextDark)
+                    .placeholder(R.color.black)
                     .into(imageCover)
         }
     }
