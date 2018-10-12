@@ -9,6 +9,7 @@ import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.newsapp.api.ApiService
 import com.newsapp.core.Threads
+import com.newsapp.domain.AppDb
 import dagger.Component
 import javax.inject.Singleton
 
@@ -30,4 +31,5 @@ interface AppComponent {
     fun apiService(): ApiService
     fun sharedPreferences(): SharedPreferences
     fun threads(): Threads
+    fun appDb(): AppDb
 }

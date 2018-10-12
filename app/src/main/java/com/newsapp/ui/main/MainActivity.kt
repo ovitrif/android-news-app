@@ -1,14 +1,15 @@
 package com.newsapp.ui.main
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import android.view.View
+import androidx.recyclerview.widget.LinearLayoutManager
 import butterknife.ButterKnife
 import com.newsapp.App
 import com.newsapp.R
-import com.newsapp.domain.entities.Article
 import com.newsapp.ui.BaseActivity
 import com.newsapp.ui.main.di.DaggerMainComponent
 import com.newsapp.ui.main.di.MainModule
+import com.newsapp.ui.main.domain.Article
 import com.newsapp.ui.main.view.ArticleListAdapter
 import com.newsapp.ui.navigator.NavigatorModule
 import kotlinx.android.synthetic.main.activity_main.*
@@ -36,10 +37,6 @@ class MainActivity : BaseActivity(), IMain.View {
         presenter.onShow()
     }
 
-    override fun addArticles(items: List<Article>) {
-        adapter.append(items)
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         presenter.onHide()
@@ -48,6 +45,19 @@ class MainActivity : BaseActivity(), IMain.View {
     override fun onBackPressed() {
         moveTaskToBack(true)
     }
+
+    override fun addArticles(items: List<Article>) {
+        articleList.visibility = View.VISIBLE
+        adapter.append(items)
+    }
+
+    override fun hideProgressView() = progressBar.hide()
+
+    override fun showEmptyListPlaceholder() {
+        noItemsView.visibility = View.VISIBLE
+    }
+
+    override fun isListEmpty() = adapter.isEmpty()
 
     private fun initView() {
         setSupportActionBar(toolbar)

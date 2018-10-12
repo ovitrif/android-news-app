@@ -1,7 +1,7 @@
 package com.newsapp.ui.main.article.di
 
 import android.app.Activity
-import com.newsapp.domain.entities.Article
+import com.newsapp.ui.main.domain.Article
 import com.newsapp.ui.main.article.ArticleNavigator
 import com.newsapp.ui.main.article.IArticle
 import dagger.Module

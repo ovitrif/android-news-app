@@ -1,6 +1,6 @@
 package com.newsapp.ui.main.article
 
-import com.newsapp.domain.entities.Article
+import com.newsapp.ui.main.domain.Article
 import com.newsapp.ui.BasePresenter
 import javax.inject.Inject
 
@@ -10,7 +10,7 @@ class ArticlePresenter @Inject constructor(
 
     override fun onShow() {
         view.setTitle(article.title)
-        view.setCoverImage(article.image.large)
-        view.setText(article.text_html)
+        view.setCoverImage(article.imageLarge)
+        view.setText(article.textHtml)
     }
 }

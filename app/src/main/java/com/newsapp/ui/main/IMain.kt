@@ -8,7 +8,12 @@ interface IMain {
 
     interface View {
         fun addArticles(items: List<Article>)
+        fun hideProgressView()
+        fun showEmptyListPlaceholder()
+        fun isListEmpty(): Boolean
     }
 
-    interface Presenter : Presentable, ArticleListAdapter.Listener
+    interface Presenter : Presentable, ArticleListAdapter.Listener {
+        fun loadArticles()
+    }
 }

@@ -1,7 +1,7 @@
 package com.newsapp.ui.main.article
 
 import android.app.Activity
-import com.newsapp.domain.entities.Article
+import com.newsapp.ui.main.domain.Article
 import com.newsapp.ui.navigator.Navigator
 import javax.inject.Inject
 

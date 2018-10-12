@@ -4,24 +4,44 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <include layout="@layout/view_app_bar" />
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/content_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/noItemsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/message_no_articles"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/articleList"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:paddingTop="@dimen/articleCardPadding"
             android:paddingBottom="@dimen/contentPaddingHalf"
+            android:paddingTop="@dimen/articleCardPadding"
+            tools:visibility="visible"
             android:scrollbars="vertical" />
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

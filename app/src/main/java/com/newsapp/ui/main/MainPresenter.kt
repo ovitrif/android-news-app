@@ -1,28 +1,35 @@
 package com.newsapp.ui.main
 
 import com.newsapp.core.Threads
-import com.newsapp.ui.main.domain.Article
-import com.newsapp.ui.main.domain.ArticleRepo
 import com.newsapp.extensions.subscribeEmpty
 import com.newsapp.ui.BasePresenter
 import com.newsapp.ui.main.article.ArticleNavigatorFactory
-import com.newsapp.ui.main.domain.GetArticlesAct
+import com.newsapp.ui.main.domain.Article
+import com.newsapp.ui.main.domain.ArticleRepo
 import javax.inject.Inject
 
 class MainPresenter @Inject constructor(
         private val view: IMain.View,
-        private val getArticlesAct: GetArticlesAct,
+        private val articleRepo: ArticleRepo,
         private val threads: Threads,
         private val articleNavigatorFactory: ArticleNavigatorFactory) : BasePresenter(), IMain.Presenter {
 
     override fun onShow() {
-        val getUserByNameJob = getArticlesAct.execute()
+        loadArticles()
+    }
+
+    override fun loadArticles() {
+        val getUserByNameJob = articleRepo.get()
                 .subscribeOn(threads.io())
                 .observeOn(threads.ui())
                 .doOnSuccess {
-                    if (it.isNotEmpty()) view.addArticles(it)
+                    when {
+                        it.isNotEmpty() -> view.addArticles(it)
+                        view.isListEmpty() -> view.showEmptyListPlaceholder()
+                    }
                 }
                 .doOnError { throw it }
+                .doFinally { view.hideProgressView() }
                 .subscribeEmpty()
         jobsBag.add(getUserByNameJob)
     }

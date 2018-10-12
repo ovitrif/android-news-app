@@ -4,5 +4,6 @@
 <resources>
     <!-- Main -->
     <string name="main_title">News App</string>
+    <string name="message_no_articles">Could not load articles…</string>
     <!-- Controls -->
 </resources>

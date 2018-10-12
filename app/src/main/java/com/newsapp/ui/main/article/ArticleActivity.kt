@@ -45,11 +45,12 @@ class ArticleActivity : BaseActivity(), IArticle.View {
     override fun setText(text: String) = with(body) { this.text = text.toHtml() }
 
     override fun setCoverImage(url: String) {
-        if (url.isNotBlank())
+        if (url.isNotBlank()) {
             Picasso.get()
                     .load(url)
                     .placeholder(R.color.colorTextDark)
                     .into(imageCover)
+        }
     }
 
     private fun initView() {

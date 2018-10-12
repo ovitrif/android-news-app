@@ -1,7 +1,6 @@
-package com.newsapp.ui.main.acts
+package com.newsapp.ui.main.domain
 
 import com.newsapp.api.ApiService
-import com.newsapp.domain.entities.Article
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -12,16 +11,21 @@ class GetArticlesAct @Inject constructor(
 
     fun execute(count: Int = 25): Single<List<Article>> {
         return apiService.getArticles(count, fields).map { result ->
-            result.response.items.map {
-                Article(
-                        it.id,
-                        it.title,
-                        it.created.formatted,
-                        it.image.medium,
-                        it.image.large,
-                        it.text_html,
-                        it.teaser_html)
-            }
+            result.response.items
+                    .asSequence()
+                    .sortedBy { it.created.timestamp }
+                    .map {
+                        Article(
+                                it.id,
+                                it.title,
+                                it.created.timestamp,
+                                it.created.formatted,
+                                it.image.medium,
+                                it.image.large,
+                                it.text_html,
+                                it.teaser_html)
+                    }
+                    .toList()
         }
     }
 }

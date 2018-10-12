@@ -1,4 +1,4 @@
-package com.newsapp.domain.entities
+package com.newsapp.ui.main.domain
 
 data class ArticlesResponse(
         val response: Response) {

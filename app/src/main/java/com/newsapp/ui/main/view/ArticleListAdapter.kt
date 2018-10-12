@@ -8,6 +8,8 @@ class ArticleListAdapter @Inject constructor() : GroupieAdapter() {
 
     fun append(items: List<Article>) = addAll(items.asSequence().map { ArticleListItem(it) }.toList())
 
+    fun isEmpty() = itemCount == 0
+
     fun setListener(listener: Listener) {
         this.setOnItemClickListener { item, _ ->
             if (item is ArticleListItem) {
