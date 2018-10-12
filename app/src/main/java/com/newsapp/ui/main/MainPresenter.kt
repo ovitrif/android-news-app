@@ -19,7 +19,7 @@ class MainPresenter @Inject constructor(
     }
 
     override fun loadArticles() {
-        val getUserByNameJob = articleRepo.get()
+        val asyncJob = articleRepo.get()
                 .subscribeOn(threads.io())
                 .observeOn(threads.ui())
                 .doOnSuccess {
@@ -30,7 +30,7 @@ class MainPresenter @Inject constructor(
                 }
                 .doFinally { view.hideProgressView() }
                 .subscribeEmpty()
-        jobsBag.add(getUserByNameJob)
+        jobsBag.add(asyncJob)
     }
 
     override fun onArticleClick(item: Article) = articleNavigatorFactory.createForArticle(item).navigate()
