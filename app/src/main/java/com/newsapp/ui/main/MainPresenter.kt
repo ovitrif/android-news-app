@@ -28,7 +28,6 @@ class MainPresenter @Inject constructor(
                         view.isListEmpty() -> view.showEmptyListPlaceholder()
                     }
                 }
-                .doOnError { throw it }
                 .doFinally { view.hideProgressView() }
                 .subscribeEmpty()
         jobsBag.add(getUserByNameJob)
