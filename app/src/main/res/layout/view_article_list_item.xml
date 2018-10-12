@@ -9,10 +9,10 @@
     android:layout_marginBottom="@dimen/contentPadding"
     android:layout_marginEnd="@dimen/contentPadding"
     android:layout_marginStart="@dimen/contentPadding"
-    android:background="@color/colorPrimary"
+    android:background="@color/white"
     android:foreground="?attr/selectableItemBackground"
     android:translationZ="@dimen/articleCardElevation"
-    app:cardCornerRadius="@dimen/contentPaddingText"
+    app:cardCornerRadius="@dimen/contentPaddingHalf"
     app:cardElevation="0dp"
     app:cardUseCompatPadding="true"
     tools:ignore="UnusedAttribute">
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/articleCardThumbSize"
         android:scaleType="centerCrop"
-        tools:src="@color/colorImagePlaceholder" />
+        tools:src="@color/smoke" />
 
     <LinearLayout
         android:id="@+id/contentLayout"
@@ -46,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/colorTextDim"
+            android:layout_marginTop="@dimen/contentPaddingQuarter"
             android:textSize="@dimen/articleCardTimeTextSize"
             tools:text="@string/lorem_ipsum_title" />
 
@@ -53,7 +54,7 @@
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/articleCardTitlePadding"
+            android:layout_marginTop="@dimen/contentPadding"
             tools:text="@string/lorem_ipsum" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

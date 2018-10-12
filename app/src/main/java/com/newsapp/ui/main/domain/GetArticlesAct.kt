@@ -7,13 +7,13 @@ import javax.inject.Inject
 class GetArticlesAct @Inject constructor(
         private val apiService: ApiService) {
 
-    private val fields = arrayOf("video", "text", "tags", "image", "html").joinToString(",")
+    private val count = 25
 
-    fun execute(count: Int = 25): Single<List<Article>> {
-        return apiService.getArticles(count, fields).map { result ->
+    fun execute(): Single<List<Article>> {
+        return apiService.getArticles(count).map { result ->
             result.response.items
                     .asSequence()
-                    .sortedBy { it.created.timestamp }
+                    .sortedByDescending { it.created.timestamp }
                     .map {
                         Article(
                                 it.id,

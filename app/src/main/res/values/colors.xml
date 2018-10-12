@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryLight">#F8F8F8</color>
-    <color name="colorPrimaryDark">#888888</color>
+    <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
 
     <color name="colorAccent">#444444</color>
     <color name="colorSecondary">#00AAFF</color>
-    <color name="colorTertiary">#FF5500</color>
 
     <color name="colorText">#555555</color>
     <color name="colorTextDark">#000000</color>
     <color name="colorTextDim">#BBBBBB</color>
-    <color name="colorImagePlaceholder">#F4F4F4</color>
 
-    <color name="appBg">@color/colorPrimaryLight</color>
-    <color name="appSystemBars">@color/colorPrimaryDark</color>
-    <color name="buttonColor">@color/colorTertiary</color>
+    <color name="smoke">#F8F8F8</color>
+    <color name="orange">#FF5500</color>
 
 </resources>

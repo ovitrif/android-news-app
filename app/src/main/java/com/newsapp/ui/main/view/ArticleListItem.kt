@@ -22,7 +22,7 @@ class ArticleListItem(
             if (data.imageMedium.isNotBlank()) {
                 Picasso.get()
                         .load(data.imageMedium)
-                        .placeholder(R.color.colorImagePlaceholder)
+                        .placeholder(R.color.white)
                         .into(thumb)
             }
         }

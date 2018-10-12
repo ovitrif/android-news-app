@@ -40,7 +40,7 @@
             android:paddingBottom="@dimen/contentPadding"
             android:paddingEnd="@dimen/contentPadding"
             android:paddingStart="@dimen/contentPadding"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/white"
             android:textSize="@dimen/articleTitleTextSize"
             android:textStyle="bold"
             tools:text="@string/lorem_ipsum_title" />

@@ -3,7 +3,6 @@ package com.newsapp.ui.main
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import butterknife.ButterKnife
 import com.newsapp.App
 import com.newsapp.R
 import com.newsapp.ui.BaseActivity
@@ -23,11 +22,10 @@ class MainActivity : BaseActivity(), IMain.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ButterKnife.bind(this)
 
         val component = DaggerMainComponent.builder()
                 .appComponent(App.getAppComponent(this))
-                .mainModule(MainModule(this, this))
+                .mainModule(MainModule(this))
                 .navigatorModule(NavigatorModule(this))
                 .build()
         presenter = component.presenter()

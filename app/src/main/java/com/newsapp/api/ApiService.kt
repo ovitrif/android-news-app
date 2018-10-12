@@ -7,8 +7,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("feed/articles")
+    @GET("feed/articles?fields=video,text,tags,image,html")
     fun getArticles(
-            @Query("count") count: Int,
-            @Query("fields") fields: String): Single<ArticlesResponse>
+            @Query("count") count: Int): Single<ArticlesResponse>
 }

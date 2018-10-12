@@ -17,10 +17,6 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-/**
- * Main application module for Dagger2.
- * Defines provider functions for the application singletons.
- */
 @Module
 class AppModule(private val context: Context) {
 
@@ -45,10 +41,6 @@ class AppModule(private val context: Context) {
                 .build()
                 .create(ApiService::class.java)
     }
-
-    @Provides
-    @Singleton
-    fun provideSharedPreferences(): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
     @Provides
     @Singleton

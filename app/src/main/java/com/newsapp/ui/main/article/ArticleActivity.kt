@@ -1,7 +1,6 @@
 package com.newsapp.ui.main.article
 
 import android.os.Bundle
-import butterknife.ButterKnife
 import com.newsapp.App
 import com.newsapp.R
 import com.newsapp.extensions.toHtml
@@ -20,7 +19,6 @@ class ArticleActivity : BaseActivity(), IArticle.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
-        ButterKnife.bind(this)
 
         val component = DaggerArticleComponent.builder()
                 .appComponent(App.getAppComponent(this))
