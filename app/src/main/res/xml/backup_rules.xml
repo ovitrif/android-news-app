@@ -4,6 +4,9 @@
         domain="sharedpref"
         path="." />
     <exclude
+        domain="database"
+        path="." />
+    <exclude
         domain="file"
         path="instant-run" />
 </full-backup-content>
