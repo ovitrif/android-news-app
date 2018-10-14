@@ -48,5 +48,9 @@ class AppModule(private val context: Context) {
 
     @Provides
     @Singleton
-    fun provideAppDb(): AppDb = Room.databaseBuilder(context, AppDb::class.java, "store.db").build()
+    fun provideAppDb(): AppDb {
+        return Room.databaseBuilder(context, AppDb::class.java, "store.db")
+                .fallbackToDestructiveMigration()
+                .build()
+    }
 }
