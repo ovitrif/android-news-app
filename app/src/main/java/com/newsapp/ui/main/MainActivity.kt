@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.view_app_bar.*
 
 class MainActivity : BaseActivity(), IMain.View {
 
-    private lateinit var presenter: IMain.Presenter
+    override lateinit var presenter: IMain.Presenter
     private lateinit var adapter: ArticleListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +33,6 @@ class MainActivity : BaseActivity(), IMain.View {
 
         initView()
         presenter.onShow()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onHide()
     }
 
     override fun onBackPressed() {

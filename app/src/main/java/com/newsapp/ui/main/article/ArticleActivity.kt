@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.view_app_bar_image.*
 
 class ArticleActivity : BaseActivity(), IArticle.View {
 
-    private lateinit var presenter: IArticle.Presenter
+    override lateinit var presenter: IArticle.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +27,6 @@ class ArticleActivity : BaseActivity(), IArticle.View {
         presenter = component.presenter()
         initView()
         presenter.onShow()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onHide()
     }
 
     override fun setTitle(text: String) {
