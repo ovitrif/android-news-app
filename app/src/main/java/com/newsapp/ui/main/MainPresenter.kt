@@ -35,7 +35,7 @@ class MainPresenter @Inject constructor(
                 .doFinally { view.hideProgressView() }
                 .doOnError { throw it }
                 .subscribeEmpty()
-        jobsBag.add(asyncJob)
+        disposeBag.add(asyncJob)
     }
 
     override fun onArticleClick(item: Article) = articleNavigatorFactory.createForArticle(item).navigate()

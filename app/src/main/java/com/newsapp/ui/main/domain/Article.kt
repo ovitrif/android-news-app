@@ -15,4 +15,4 @@ data class Article(
         val imageMedium: String = "",
         val imageLarge: String = "",
         val textHtml: String = "",
-        val teaserHtml: String = "") : Parcelable
+        val textExcerpt: String = "") : Parcelable
