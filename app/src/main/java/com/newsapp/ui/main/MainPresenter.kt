@@ -18,17 +18,22 @@ class MainPresenter @Inject constructor(
         loadArticles()
     }
 
+    override fun onRefresh() {
+        loadArticles()
+    }
+
     override fun loadArticles() {
         val asyncJob = articleRepo.get()
                 .subscribeOn(threads.io())
                 .observeOn(threads.ui())
                 .doOnSuccess {
                     when {
-                        it.isNotEmpty() -> view.addArticles(it)
+                        it.isNotEmpty() -> view.fillList(it)
                         view.isListEmpty() -> view.showEmptyListPlaceholder()
                     }
                 }
                 .doFinally { view.hideProgressView() }
+                .doOnError { throw it }
                 .subscribeEmpty()
         jobsBag.add(asyncJob)
     }

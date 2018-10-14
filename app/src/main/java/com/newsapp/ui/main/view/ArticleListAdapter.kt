@@ -6,7 +6,10 @@ import javax.inject.Inject
 
 class ArticleListAdapter @Inject constructor() : GroupieAdapter() {
 
-    fun append(items: List<Article>) = addAll(items.asSequence().map { ArticleListItem(it) }.toList())
+    fun fill(items: List<Article>) {
+        clear()
+        addAll(items.asSequence().map { ArticleListItem(it) }.toList())
+    }
 
     fun isEmpty() = itemCount == 0
 
@@ -19,7 +22,6 @@ class ArticleListAdapter @Inject constructor() : GroupieAdapter() {
     }
 
     interface Listener {
-
         fun onArticleClick(item: Article)
     }
 }

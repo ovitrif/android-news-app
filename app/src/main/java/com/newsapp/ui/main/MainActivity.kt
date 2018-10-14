@@ -44,12 +44,15 @@ class MainActivity : BaseActivity(), IMain.View {
         moveTaskToBack(true)
     }
 
-    override fun addArticles(items: List<Article>) {
+    override fun fillList(items: List<Article>) {
         articleList.visibility = View.VISIBLE
-        adapter.append(items)
+        adapter.fill(items)
     }
 
-    override fun hideProgressView() = progressBar.hide()
+    override fun hideProgressView() {
+        refreshView.isRefreshing = false
+        progressBar.hide()
+    }
 
     override fun showEmptyListPlaceholder() {
         noItemsView.visibility = View.VISIBLE
@@ -61,6 +64,7 @@ class MainActivity : BaseActivity(), IMain.View {
         setSupportActionBar(toolbar)
         supportActionBar?.setTitle(R.string.main_title)
         adapter.setListener(presenter)
+        refreshView.setOnRefreshListener(presenter)
         articleList.adapter = adapter
         articleList.layoutManager = LinearLayoutManager(this)
     }
