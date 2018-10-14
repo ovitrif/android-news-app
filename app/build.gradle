@@ -110,7 +110,7 @@ dependencies {
     // Flipper
     debugImplementation 'com.facebook.flipper:flipper:0.7.2'
     // Groupie
-    implementation 'com.xwray:groupie:2.0.3'
+    implementation 'com.xwray:groupie:2.1.0'
     // Test Libs
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.robolectric:robolectric:3.6.1'
