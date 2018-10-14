@@ -9,13 +9,16 @@
     <dimen name="appBarElevation">2.5dp</dimen>
 
     <dimen name="articleListPaddingTop">16dp</dimen>
+
     <dimen name="articleCardElevation">1dp</dimen>
     <dimen name="articleCardTitleTextSize">18sp</dimen>
     <dimen name="articleCardTimeTextSize">12sp</dimen>
     <dimen name="articleCardThumbSize">150dp</dimen>
+
     <dimen name="articleTextSize">16sp</dimen>
     <dimen name="articleTitleTextSize">22sp</dimen>
 
     <dimen name="imageAppBarHeight">320dp</dimen>
     <dimen name="imageAppBarCollapsedHeight">82dp</dimen>
+
 </resources>

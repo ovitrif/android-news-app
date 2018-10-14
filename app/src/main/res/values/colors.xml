@@ -5,9 +5,9 @@
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
 
-    <color name="lightBlue">#00AAFF</color>
     <color name="orange">#FF5500</color>
 
+    <color name="statusBar">#FEFCFC</color>
     <color name="smoke">#F5F5F5</color>
     <color name="smokeGray">#BBBBBB</color>
     <color name="gray">#555555</color>

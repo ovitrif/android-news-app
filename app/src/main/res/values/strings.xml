@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- CONVENTION: <<namespace_>module<_specific>>_screen>_control>_label>_state> -->
-<!-- Use generic-to-specific pattern, as a rule of thumb, the priority should be: what_which_how -->
 <resources>
+    <!-- Use generic-to-specific pattern, as a rule of thumb, the priority should be: what_which_how -->
+
     <!-- Main -->
     <string name="main_title">News App</string>
     <string name="message_no_articles">Could not load articles…</string>
-    <!-- Controls -->
 </resources>
